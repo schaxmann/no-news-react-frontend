@@ -1,0 +1,23 @@
+h2 {
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  background-color: lightcoral;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+ul {
+  margin: auto;
+  max-width: 70%;
+  justify-content: center;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 2em;
+  padding: 0 2em;
+}
