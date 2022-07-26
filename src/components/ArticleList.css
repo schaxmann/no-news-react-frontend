@@ -1,16 +1,9 @@
-h2 {
+#listTitle {
   padding: 0;
   text-align: center;
 }
 
-li {
-  background-color: lightcoral;
-  border: 2px solid black;
-  border-radius: 4px;
-  padding: 0.5rem;
-}
-
-ul {
+#articleList {
   margin: auto;
   max-width: 70%;
   justify-content: center;

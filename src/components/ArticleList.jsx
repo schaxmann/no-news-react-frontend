@@ -21,15 +21,11 @@ function ItemList() {
   return (
     <>
       <main>
-        <h2>Check Out These Articles ⬇️</h2>
-        <section id="ArticleList">
-          <ul>
+        <h2 id="listTitle">Check Out These Articles ⬇️</h2>
+        <section>
+          <ul id="articleList">
             {articleList.map((article) => {
-              return (
-                <li key={article.article_id}>
-                  <ArticleCard article={article} />
-                </li>
-              );
+              return <ArticleCard article={article} />;
             })}
           </ul>
         </section>
@@ -37,5 +33,7 @@ function ItemList() {
     </>
   );
 }
+
+// TODO: Pagination
 
 export default ItemList;
