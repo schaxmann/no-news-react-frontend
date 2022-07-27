@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import "../styling/ArticlePage.css";
 import { useFetchArticle } from "../hooks/useFetch";
-import Votes from "./Votes";
+import * as React from "react";
 
-function ArticlePage() {
+function Votes() {
   const { article } = useParams();
-  const { currentArticle, isLoading } = useFetchArticle(article);
+  const { currentArticle, isLoading } = { props };
 
   if (isLoading) return <progress></progress>;
   return (
@@ -13,7 +13,7 @@ function ArticlePage() {
       <article>
         <h2> {currentArticle.title}</h2>
         <p>{currentArticle.body}</p>
-        <h3> Written by: {currentArticle.author} </h3>
+        <h3> Curent Votes: {currentArticle.author} </h3>
         <h3> Published on: {currentArticle.created_at.split("T")[0]} </h3>
       </article>
       <section className="votes">
@@ -23,4 +23,4 @@ function ArticlePage() {
   );
 }
 
-export default ArticlePage;
+export default Votes;
