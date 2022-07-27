@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const useFetch = (topic) => {
+const useFetchArticles = (topic) => {
   const [articleList, setArticleList] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,4 +25,24 @@ const useFetch = (topic) => {
   return { articleList, isLoading };
 };
 
-export default useFetch;
+const useFetchArticle = (article) => {
+  const [currentArticle, setCurrentArticle] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get(`https://schaxmann-news.herokuapp.com/api/articles/${article}`)
+      .then(({ data }) => {
+        return data.article;
+      })
+      .then((articleFromApi) => {
+        setCurrentArticle(articleFromApi);
+        setIsLoading(false);
+      });
+  }, [article]);
+
+  return { currentArticle, isLoading };
+};
+
+export { useFetchArticles, useFetchArticle };
