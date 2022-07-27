@@ -1,4 +1,4 @@
-import "./ArticleCard.css";
+import "../styling/ArticleCard.css";
 
 function ArticleCard(props) {
   const { article } = props;

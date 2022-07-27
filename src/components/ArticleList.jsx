@@ -1,21 +1,11 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import fetchArticles from "../utils/RequestUtils";
 import ArticleCard from "./ArticleCard";
-import "./ArticleList.css";
+import "../styling/ArticleList.css";
+import useFetch from "../hooks/useFetch";
 
 function ItemList() {
-  const [articleList, setArticleList] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
   const { topic } = useParams();
-
-  useEffect(() => {
-    setIsLoading(true);
-    fetchArticles(topic).then((articlesFromApi) => {
-      setArticleList(articlesFromApi);
-      setIsLoading(false);
-    });
-  }, [topic]);
+  const { articleList, isLoading } = useFetch(topic);
 
   if (isLoading) return <progress></progress>;
   return (
