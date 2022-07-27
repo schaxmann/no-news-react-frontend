@@ -12,9 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<ArticleList />} />
-          <Route path="/shop" element={<ArticleList />} />
-          <Route path="/shop" element={<ArticleList />} />
-          <Route path="/shop" element={<ArticleList />} />
+          <Route path="/:topic" element={<ArticleList />} />
         </Routes>
       </div>
     </BrowserRouter>

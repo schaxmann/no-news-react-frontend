@@ -7,19 +7,27 @@ import "./ArticleList.css";
 function ItemList() {
   const [articleList, setArticleList] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const { topic } = useParams();
 
   useEffect(() => {
     setIsLoading(true);
-    fetchArticles().then((articlesFromApi) => {
+    fetchArticles(topic).then((articlesFromApi) => {
       setArticleList(articlesFromApi);
       setIsLoading(false);
     });
-  }, []);
+  }, [topic]);
 
   if (isLoading) return <progress></progress>;
   return (
     <main>
-      <h2 id="listTitle">Check Out These Articles ⬇️</h2>
+      {topic ? (
+        <h2 id="listTitle">
+          Check Out These {topic.charAt(0).toUpperCase() + topic.slice(1)}{" "}
+          Articles ⬇️{" "}
+        </h2>
+      ) : (
+        <h2 id="listTitle">Check Out These Articles ⬇️</h2>
+      )}
       <section>
         <ul id="articleList">
           {articleList.map((article) => {
