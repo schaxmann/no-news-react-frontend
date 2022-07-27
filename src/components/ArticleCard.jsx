@@ -1,4 +1,5 @@
-import "./ArticleCard.css";
+import "../styling/ArticleCard.css";
+import { Link } from "react-router-dom";
 
 function ArticleCard(props) {
   const { article } = props;
@@ -10,7 +11,9 @@ function ArticleCard(props) {
       <p className="articleInfo">Topic: {article.topic}</p>
       <p className="articleInfo">Votes: {article.votes}</p>
       <p className="articleInfo">Comments: {article.comment_count}</p>
-      <button>Read Now</button>
+      <Link className="articleLink" to={`/articles/${article.article_id}`}>
+        Read Now
+      </Link>
     </li>
   );
 }

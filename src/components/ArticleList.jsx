@@ -1,21 +1,11 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import fetchArticles from "../utils/RequestUtils";
 import ArticleCard from "./ArticleCard";
-import "./ArticleList.css";
+import "../styling/ArticleList.css";
+import { useFetchArticles } from "../hooks/useFetch";
 
-function ItemList() {
-  const [articleList, setArticleList] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+function ArticleList() {
   const { topic } = useParams();
-
-  useEffect(() => {
-    setIsLoading(true);
-    fetchArticles(topic).then((articlesFromApi) => {
-      setArticleList(articlesFromApi);
-      setIsLoading(false);
-    });
-  }, [topic]);
+  const { articleList, isLoading } = useFetchArticles(topic);
 
   if (isLoading) return <progress></progress>;
   return (
@@ -41,4 +31,4 @@ function ItemList() {
 
 // TODO: Pagination
 
-export default ItemList;
+export default ArticleList;
