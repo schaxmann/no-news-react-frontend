@@ -1,25 +1,44 @@
-import { useParams } from "react-router-dom";
 import "../styling/ArticlePage.css";
-import { useFetchArticle } from "../hooks/useFetch";
-import * as React from "react";
+import { useState } from "react";
+import axios from "axios";
 
-function Votes() {
-  const { article } = useParams();
-  const { currentArticle, isLoading } = { props };
+function Votes(props) {
+  let { votes, article } = props;
+  const [newVotes, setNewVotes] = useState(votes);
+  const [err, setErr] = useState(null);
+  const [disabled, setDisabled] = useState(false);
 
-  if (isLoading) return <progress></progress>;
+  const voteHandler = () => {
+    setNewVotes(newVotes + 1);
+    setDisabled(true);
+    setErr(null);
+    axios
+      .patch(`https://schaxmann-news.herokuapp.com/api/articles/${article}`, {
+        inc_votes: 1,
+      })
+      .then(() => {
+        setDisabled(false);
+      })
+      .catch(() => {
+        setNewVotes(newVotes);
+        setErr("Something went wrong, please try again later.");
+        setDisabled(false);
+      });
+  };
+
   return (
-    <main>
-      <article>
-        <h2> {currentArticle.title}</h2>
-        <p>{currentArticle.body}</p>
-        <h3> Curent Votes: {currentArticle.author} </h3>
-        <h3> Published on: {currentArticle.created_at.split("T")[0]} </h3>
-      </article>
-      <section className="votes">
-        <Votes votes={currentArticle.votes} />
-      </section>
-    </main>
+    <section className="votes">
+      <h3>Curent Votes: {newVotes}</h3>
+      <button
+        disabled={disabled}
+        onClick={() => {
+          voteHandler();
+        }}
+      >
+        Upvote
+      </button>
+      {err ? <p>{err}</p> : <p></p>}
+    </section>
   );
 }
 

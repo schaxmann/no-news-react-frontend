@@ -17,7 +17,7 @@ function ArticlePage() {
         <h3> Published on: {currentArticle.created_at.split("T")[0]} </h3>
       </article>
       <section className="votes">
-        <Votes votes={currentArticle.votes} />
+        <Votes votes={currentArticle.votes} article={article} />
       </section>
     </main>
   );
