@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const useFetchArticles = (topic) => {
+const useFetchArticles = (topic, sorter) => {
   const [articleList, setArticleList] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const { order, sort_by } = sorter;
 
   useEffect(() => {
     setIsLoading(true);
@@ -11,6 +12,8 @@ const useFetchArticles = (topic) => {
       .get(`https://schaxmann-news.herokuapp.com/api/articles/`, {
         params: {
           topic,
+          order,
+          sort_by,
         },
       })
       .then(({ data }) => {
@@ -20,7 +23,7 @@ const useFetchArticles = (topic) => {
         setArticleList(articlesFromApi);
         setIsLoading(false);
       });
-  }, [topic]);
+  }, [topic, order, sort_by]);
 
   return { articleList, isLoading };
 };

@@ -34,3 +34,14 @@ nav {
 nav a {
   padding: 0 0.2em;
 }
+
+.sort {
+  max-width: 85%;
+  display: block;
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+.sort button {
+  margin-left: 0.5em;
+}
