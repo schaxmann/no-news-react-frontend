@@ -6,6 +6,13 @@ article {
   font-size: 1.5rem;
 }
 
+@media (max-width: 800px) {
+  article {
+    max-width: 80%;
+    padding: 0;
+  }
+}
+
 .votes {
   font-size: 1.5rem;
   display: inline;
@@ -14,6 +21,45 @@ article {
 .votes h3 {
   padding: 0;
   margin: 0;
+}
+
+.comments {
+  text-align: left;
+  font-size: 1.3em;
+}
+
+.comments ul {
+  padding: 0;
+}
+
+.comments p {
+  margin: 1.5rem 1rem 1em;
+}
+
+.comments li {
+  background-color: azure;
+  max-width: 50%;
+  margin: auto;
+  list-style-type: none;
+  border-radius: 0.3em;
+}
+
+.comments h5 {
+  margin: 0 1rem;
+  display: inline;
+  padding-right: 2em;
+}
+
+@media (max-width: 1050px) {
+  .comments h5 {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .comments li {
+    max-width: 80%;
+  }
 }
 
 /* .votes button {

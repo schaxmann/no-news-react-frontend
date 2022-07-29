@@ -45,4 +45,26 @@ const useFetchArticle = (article) => {
   return { currentArticle, isLoading };
 };
 
-export { useFetchArticles, useFetchArticle };
+const useFetchComments = (article) => {
+  const [commentList, setCommentList] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get(
+        `https://schaxmann-news.herokuapp.com/api/articles/${article}/comments`
+      )
+      .then(({ data }) => {
+        return data.comments;
+      })
+      .then((commentsFromApi) => {
+        setCommentList(commentsFromApi);
+        setIsLoading(false);
+      });
+  }, [article]);
+
+  return { commentList, isLoading };
+};
+
+export { useFetchArticles, useFetchArticle, useFetchComments };

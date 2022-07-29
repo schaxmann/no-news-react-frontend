@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "../styling/ArticlePage.css";
 import { useFetchArticle } from "../hooks/useFetch";
 import Votes from "./Votes";
+import CommentList from "./CommentList";
 
 function ArticlePage() {
   const { article } = useParams();
@@ -18,6 +19,9 @@ function ArticlePage() {
       </article>
       <section className="votes">
         <Votes votes={currentArticle.votes} article={article} />
+      </section>
+      <section className="comments">
+        <CommentList article={article} />
       </section>
     </main>
   );
