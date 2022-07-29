@@ -45,7 +45,7 @@ const useFetchArticle = (article) => {
   return { currentArticle, isLoading };
 };
 
-const useFetchComments = (article) => {
+const useFetchComments = (article, hasCommented) => {
   const [commentList, setCommentList] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -62,7 +62,7 @@ const useFetchComments = (article) => {
         setCommentList(commentsFromApi);
         setIsLoading(false);
       });
-  }, [article]);
+  }, [article, hasCommented]);
 
   return { commentList, isLoading };
 };
