@@ -13,6 +13,8 @@ function ArticleList() {
   const [submitSorter, setSubmitSorter] = useState({});
   const { articleList, isLoading } = useFetchArticles(topic, submitSorter);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [isChecked, setIsChecked] = useState("desc");
+  const [selector, setSelector] = useState("created_on");
 
   const sortHandler = (event) => {
     event.preventDefault();
@@ -25,10 +27,12 @@ function ArticleList() {
     if (event.target.id === "sortBy") {
       const newSorter = { ...sorter };
       newSorter.sort_by = event.target.value;
+      setSelector(event.target.value);
       setSorter(newSorter);
     } else {
       const newSorter = { ...sorter };
       newSorter.order = event.target.value;
+      setIsChecked(event.target.value);
       setSorter(newSorter);
     }
   };
@@ -48,6 +52,7 @@ function ArticleList() {
         <label htmlFor="sortBy">Sort By: </label>
         <select
           id="sortBy"
+          value={selector}
           onChange={(event) => {
             handleChange(event);
           }}
@@ -64,17 +69,18 @@ function ArticleList() {
             handleChange(event);
           }}
           value="asc"
+          checked={"asc" === isChecked}
         />
         <label htmlFor="asc">Ascending</label>
         <input
           type="radio"
           id="desc"
           name="order"
-          defaultChecked
           onChange={(event) => {
             handleChange(event);
           }}
           value="desc"
+          checked={"desc" === isChecked}
         />
         <label htmlFor="desc">Descending</label>
         <button
