@@ -13,7 +13,11 @@ function Comments() {
         hasCommented={hasCommented}
         setHasCommented={setHasCommented}
       />
-      <CommentList article={article} hasCommented={hasCommented} />
+      <CommentList
+        article={article}
+        hasCommented={hasCommented}
+        setHasCommented={setHasCommented}
+      />
     </section>
   );
 }

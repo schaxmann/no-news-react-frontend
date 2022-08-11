@@ -12,7 +12,7 @@ function ArticleList() {
   });
   const [submitSorter, setSubmitSorter] = useState({});
   const { articleList, isLoading } = useFetchArticles(topic, submitSorter);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [setSearchParams] = useSearchParams();
   const [isChecked, setIsChecked] = useState("desc");
   const [selector, setSelector] = useState("created_on");
 
