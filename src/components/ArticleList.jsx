@@ -12,7 +12,7 @@ function ArticleList() {
   });
   const [submitSorter, setSubmitSorter] = useState({});
   const { articleList, isLoading } = useFetchArticles(topic, submitSorter);
-  const [setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [isChecked, setIsChecked] = useState("desc");
   const [selector, setSelector] = useState("created_on");
 
@@ -23,7 +23,6 @@ function ArticleList() {
   };
 
   const handleChange = (event) => {
-    console.log(sorter);
     if (event.target.id === "sortBy") {
       const newSorter = { ...sorter };
       newSorter.sort_by = event.target.value;
@@ -40,14 +39,14 @@ function ArticleList() {
   if (isLoading) return <progress></progress>;
   return (
     <main>
-      {topic ? (
+      {/* {topic ? (
         <h2 id="listTitle">
           Check Out These {topic.charAt(0).toUpperCase() + topic.slice(1)}{" "}
           Articles ⬇️{" "}
         </h2>
       ) : (
         <h2 id="listTitle">Check Out These Articles ⬇️</h2>
-      )}
+      )} */}
       <form className="sort">
         <label htmlFor="sortBy">Sort By: </label>
         <select
