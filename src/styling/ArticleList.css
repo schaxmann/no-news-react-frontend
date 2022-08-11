@@ -21,18 +21,65 @@ progress {
   left: calc(50% - 75px);
 }
 
+header {
+  color: #f4f1d0;
+}
+
 h1 {
-  font-size: 3em;
+  font-size: 2.8rem;
   padding: 0;
-  margin: 0.5em;
+  margin: 0;
+  font-family: ibm-plex-sans, sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 0px;
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
 }
 
 nav {
-  font-size: 1.5em;
+  font-size: 1, 5rem;
+  padding: 3rem;
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 nav a {
-  padding: 0 0.2em;
+  color: #9ba0b3;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  overflow: hidden;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #f04576;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  opacity: 1;
+  transform: translate3d(-101%, 0, 0);
+}
+
+nav a:hover {
+  color: #f4f1d0;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  transform: translate3d(0, 0, 0);
 }
 
 .sort {
@@ -40,8 +87,19 @@ nav a {
   display: block;
   text-align: right;
   margin-bottom: 1em;
+  color: #9ba0b3;
+  font-family: ibm-plex-mono, sans-serif;
 }
 
 .sort button {
   margin-left: 0.5em;
+  font-family: ibm-plex-mono, sans-serif;
 }
+
+select {
+  font-family: ibm-plex-mono, sans-serif;
+}
+
+/* option {
+  font-family: ibm-plex-mono, sans-serif;
+} */
