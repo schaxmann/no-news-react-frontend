@@ -1,12 +1,13 @@
 import "../styling/ArticleList.css";
 import { useFetchComments } from "../hooks/useFetch";
 import CommentCard from "./CommentCard";
+import { CircularProgress } from "@mui/material";
 
 function CommentList(props) {
   const { article, hasCommented, setHasCommented } = props;
   const { commentList, isLoading } = useFetchComments(article, hasCommented);
 
-  if (isLoading) return <progress></progress>;
+  if (isLoading) return <CircularProgress />;
   return (
     <ul id="commentList">
       {commentList.map((comment) => {

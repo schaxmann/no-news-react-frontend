@@ -3,12 +3,13 @@ import "../styling/ArticlePage.css";
 import { useFetchArticle } from "../hooks/useFetch";
 import Votes from "./Votes";
 import Comments from "./Comments";
+import { CircularProgress } from "@mui/material";
 
 function ArticlePage() {
   const { article } = useParams();
   const { currentArticle, isLoading } = useFetchArticle(article);
 
-  if (isLoading) return <progress></progress>;
+  if (isLoading) return <CircularProgress />;
   return (
     <main>
       <article className="mainArticles">
