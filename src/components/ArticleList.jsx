@@ -128,9 +128,17 @@ function ArticleList() {
       </form>
       <section>
         <ul id="articleList">
-          {articleList.map((article) => {
-            return <ArticleCard key={article.article_id} article={article} />;
-          })}
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+              gap: 4,
+            }}
+          >
+            {articleList.map((article) => {
+              return <ArticleCard key={article.article_id} article={article} />;
+            })}
+          </Box>
         </ul>
       </section>
     </main>

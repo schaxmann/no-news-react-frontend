@@ -42,6 +42,7 @@ function Votes(props) {
         onClick={() => {
           voteHandler();
         }}
+        sx={{ mt: 5 }}
       >
         {newVotes}
       </Button>
