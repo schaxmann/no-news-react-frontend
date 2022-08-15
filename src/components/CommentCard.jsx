@@ -1,5 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import AspectRatio from "@mui/joy/AspectRatio";
+import Box from "@mui/joy/Box";
+import Card from "@mui/joy/Card";
+import CardOverflow from "@mui/joy/CardOverflow";
+import Typography from "@mui/joy/Typography";
 
 function CommentCard(props) {
   let { comment, hasCommented, setHasCommented } = props;
@@ -36,23 +41,34 @@ function CommentCard(props) {
     <li className="commentCard" postid={comment.comment_id}>
       {comment.author === "grumpy19" ? (
         <>
-          <p>{comment.body}</p>
-          <h5>Published: {comment.created_at.split("T")[0]}</h5>
-          <h5>Author: {comment.author}</h5>
-          <button
-            disabled={disabled}
-            onClick={(event) => {
-              stateHandler(event);
-            }}
-          >
-            Delete
-          </button>
+          <Card variant="outlined" sx={{ maxWidth: "100%" }}>
+            <Typography level="body 1" sx={{ fontSize: "md", mt: 0 }}>
+              {/* <Link className="articleLink" to={`/articles/${article.article_id}`}> */}
+              {comment.body}
+              {/* </Link> */}
+            </Typography>
+            <button
+              disabled={disabled}
+              onClick={(event) => {
+                stateHandler(event);
+              }}
+            >
+              Delete
+            </button>
+          </Card>
         </>
       ) : (
         <>
-          <p>{comment.body}</p>
+          <Card variant="outlined" sx={{ maxWidth: "100%" }}>
+            <Typography level="body 1" sx={{ fontSize: "md", mt: 0 }}>
+              {/* <Link className="articleLink" to={`/articles/${article.article_id}`}> */}
+              {comment.body}
+              {/* </Link> */}
+            </Typography>
+          </Card>
+          {/* <p>{comment.body}</p>
           <h5>Published: {comment.created_at.split("T")[0]}</h5>
-          <h5>Author: {comment.author}</h5>
+          <h5>Author: {comment.author}</h5> */}
         </>
       )}
       {err ? <p>{err}</p> : null}

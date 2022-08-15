@@ -1,6 +1,10 @@
 import "../styling/ArticlePage.css";
 import { useState } from "react";
 import axios from "axios";
+// import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
+// import IconButton from "@mui/joy/IconButton";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Button from "@mui/joy/Button";
 
 function Votes(props) {
   let { votes, article } = props;
@@ -28,15 +32,28 @@ function Votes(props) {
 
   return (
     <section className="votes">
-      <h3>Curent Votes: {newVotes}</h3>
-      <button
+      {/* <h3>Curent Votes: {newVotes}</h3> */}
+      <Button
+        variant="solid"
+        color="danger"
+        size="lg"
+        disabled={disabled}
+        startIcon={<FavoriteBorder />}
+        onClick={() => {
+          voteHandler();
+        }}
+        sx={{ mt: 5 }}
+      >
+        {newVotes}
+      </Button>
+      {/* <button
         disabled={disabled}
         onClick={() => {
           voteHandler();
         }}
       >
         Upvote
-      </button>
+      </button> */}
       {err ? <p>{err}</p> : <p></p>}
     </section>
   );
