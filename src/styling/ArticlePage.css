@@ -13,6 +13,11 @@
   }
 }
 
+h3,
+h4 {
+  color: #f4f1d0;
+}
+
 .votes {
   font-size: 1.5rem;
   display: inline;

@@ -45,7 +45,6 @@ function ArticlePage() {
       <section className="votes">
         <Votes votes={currentArticle.votes} article={article} />
       </section>
-      ;
       <Comments />
     </main>
   );

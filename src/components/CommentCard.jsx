@@ -35,6 +35,8 @@ function CommentCard(props) {
     if (toDelete) {
       deleteHandler();
     }
+    console.log(toDelete);
+    console.log(hasCommented);
   }, [toDelete, hasCommented, setHasCommented]);
 
   return (
