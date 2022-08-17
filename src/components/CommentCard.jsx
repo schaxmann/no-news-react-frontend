@@ -13,7 +13,7 @@ function CommentCard(props) {
   const [err, setErr] = useState(null);
 
   const stateHandler = (event) => {
-    setToDelete(event.target.parentNode.getAttribute("postid"));
+    setToDelete(event.target.parentNode.parentNode.getAttribute("postid"));
   };
 
   useEffect(() => {
@@ -35,8 +35,6 @@ function CommentCard(props) {
     if (toDelete) {
       deleteHandler();
     }
-    console.log(toDelete);
-    console.log(hasCommented);
   }, [toDelete, hasCommented, setHasCommented]);
 
   return (
