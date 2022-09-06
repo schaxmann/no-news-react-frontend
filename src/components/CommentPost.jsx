@@ -32,8 +32,8 @@ function CommentPost(props) {
 
   return (
     <fieldset className="postComment">
-      <h3>Leave a Comment: </h3>
-      <h4>Logged In As: grumpy19</h4>
+      <h3 className="comment">Leave a Comment: </h3>
+      <h4 className="comment">Logged In As: grumpy19</h4>
       <form>
         <textarea
           rows="2"

@@ -42,6 +42,7 @@ function CommentCard(props) {
       {comment.author === "grumpy19" ? (
         <>
           <Card variant="outlined" sx={{ maxWidth: "100%" }}>
+            <h3>{comment.author} (You)</h3>
             <Typography level="body 1" sx={{ fontSize: "md", mt: 0 }}>
               {/* <Link className="articleLink" to={`/articles/${article.article_id}`}> */}
               {comment.body}
@@ -60,6 +61,7 @@ function CommentCard(props) {
       ) : (
         <>
           <Card variant="outlined" sx={{ maxWidth: "100%" }}>
+            <h3>{comment.author}</h3>
             <Typography level="body 1" sx={{ fontSize: "md", mt: 0 }}>
               {/* <Link className="articleLink" to={`/articles/${article.article_id}`}> */}
               {comment.body}
