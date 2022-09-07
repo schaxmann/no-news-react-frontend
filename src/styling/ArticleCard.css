@@ -3,10 +3,19 @@
   border: 2px solid darkcyan;
   border-radius: 0.5em;
   padding: 0.5rem;
+  font-family: ibm-plex-sans, sans-serif;
 }
 
-h2,
-h3,
-h4 {
+.articleCard h2,
+.articleCard h3,
+.articleCard h4 {
   color: black;
+}
+
+.articleCard h3 {
+  font-family: ibm-plex-sans, sans-serif;
+  font-size: 1.5rem;
+  padding: 3rem 1rem;
+  text-align: left;
+  line-height: 1.2;
 }
