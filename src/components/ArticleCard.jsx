@@ -33,7 +33,9 @@ function ArticleCard(props) {
   }
   return (
     <li className="articleCard">
-      <h3>{article.title.toUpperCase()}</h3>
+      <h3>
+        <span>{article.title.toUpperCase()}</span>
+      </h3>
       <h4>
         Published: {formatDate(new Date(article.created_at.split("T")[0]))}
       </h4>
