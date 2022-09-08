@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import ArticleList from "./components/ArticleList";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,7 +11,6 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Header />
           <Routes>
             <Route path="/" element={<ArticleList />} />
             <Route path="/:topic" element={<ArticleList />} />

@@ -20,14 +20,7 @@ function ArticlePage() {
     <main>
       <article className="mainArticles">
         <Card variant="outlined" sx={{ width: "100%" }}>
-          <CardOverflow>
-            <AspectRatio ratio="2">
-              <img
-                src={require(`../assets/${currentArticle.topic}.png`)}
-                alt={`${currentArticle.topic} icon`}
-              />
-            </AspectRatio>
-          </CardOverflow>
+          <CardOverflow></CardOverflow>
           <Typography level="h2" sx={{ fontSize: "md", mt: 2 }}>
             {/* <Link className="articleLink" to={`/articles/${article.article_id}`}> */}
             {currentArticle.title}

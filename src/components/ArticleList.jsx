@@ -43,14 +43,6 @@ function ArticleList() {
   if (isLoading) return <CircularProgress sx={{ color: cream }} />;
   return (
     <main>
-      {topic ? (
-        <h2 id="listTitle">
-          Check Out These {topic.charAt(0).toUpperCase() + topic.slice(1)}{" "}
-          Articles ⬇️{" "}
-        </h2>
-      ) : (
-        <h2 id="listTitle">Check Out These Articles ⬇️</h2>
-      )}
       <form className="sort">
         <label htmlFor="sortBy">Sort By: </label>
         <select
