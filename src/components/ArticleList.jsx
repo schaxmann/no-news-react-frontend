@@ -8,12 +8,12 @@ import { CircularProgress } from "@mui/material";
 function ArticleList() {
   const { topic } = useParams();
   const [sorter, setSorter] = useState({
-    sort_by: "created_on",
+    sort_by: "created_at",
     order: "desc",
   });
   const [submitSorter, setSubmitSorter] = useState({});
   const { articleList, isLoading } = useFetchArticles(topic, submitSorter);
-  const [setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [isChecked, setIsChecked] = useState("desc");
   const [selector, setSelector] = useState("created_at");
 
@@ -52,7 +52,7 @@ function ArticleList() {
             handleChange(event);
           }}
         >
-          <option value="created_on">Date Published</option>
+          <option value="created_at">Date Published</option>
           <option value="comment_count">Comment Count</option>
           <option value="votes">Vote Count</option>
         </select>
