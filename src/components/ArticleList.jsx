@@ -17,6 +17,8 @@ function ArticleList() {
   const [isChecked, setIsChecked] = useState("desc");
   const [selector, setSelector] = useState("created_at");
 
+  const cream = "#f4f1d0";
+
   const sortHandler = (event) => {
     event.preventDefault();
     setSearchParams(sorter);
@@ -38,7 +40,7 @@ function ArticleList() {
     }
   };
 
-  if (isLoading) return <CircularProgress />;
+  if (isLoading) return <CircularProgress sx={{ color: cream }} />;
   return (
     <main>
       {topic ? (
