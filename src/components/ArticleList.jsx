@@ -4,6 +4,8 @@ import "../styling/ArticleList.css";
 import { useFetchArticles } from "../hooks/useFetch";
 import { useState } from "react";
 import { CircularProgress } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUp, faCircleDown } from "@fortawesome/free-regular-svg-icons";
 
 function ArticleList() {
   const { topic } = useParams();
@@ -56,28 +58,35 @@ function ArticleList() {
           <option value="comment_count">Comment Count</option>
           <option value="votes">Vote Count</option>
         </select>
-        <input
-          type="radio"
-          id="asc"
-          name="order"
-          onChange={(event) => {
-            handleChange(event);
-          }}
-          value="asc"
-          checked={"asc" === isChecked}
-        />
-        <label htmlFor="asc">Ascending</label>
-        <input
-          type="radio"
-          id="desc"
-          name="order"
-          onChange={(event) => {
-            handleChange(event);
-          }}
-          value="desc"
-          checked={"desc" === isChecked}
-        />
-        <label htmlFor="desc">Descending</label>
+
+        <div class="toggle-radio">
+          <input
+            type="radio"
+            name="order"
+            id="desc"
+            onChange={(event) => {
+              handleChange(event);
+            }}
+            value="desc"
+            checked={"desc" === isChecked}
+          />
+          <input
+            type="radio"
+            name="order"
+            id="asc"
+            onChange={(event) => {
+              handleChange(event);
+            }}
+            value="asc"
+            checked={"asc" === isChecked}
+          />
+          <div class="switch">
+            <label for="desc">Desc</label>
+            <label for="asc">Asc</label>
+            <span></span>
+          </div>
+        </div>
+
         <button
           onClick={(event) => {
             sortHandler(event);

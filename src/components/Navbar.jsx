@@ -1,12 +1,5 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-  icon,
-} from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
-
 import { faUserCircle, faBellSlash } from "@fortawesome/free-regular-svg-icons";
 
 function Navbar() {

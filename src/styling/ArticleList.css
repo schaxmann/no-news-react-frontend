@@ -144,14 +144,87 @@ nav a:focus::after {
 }
 
 .sort button {
+  position: relative;
+  bottom: 20px;
   margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
 }
 
 select {
   font-family: ibm-plex-mono, sans-serif;
+  margin-right: 17rem;
 }
 
 /* option {
   font-family: ibm-plex-mono, sans-serif;
 } */
+
+.switch {
+  display: inline-block;
+  position: absolute;
+  right: 18.5rem;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  margin: -30px 0 0 -75px;
+  background: #101014;
+  transition: all 0.2s ease;
+  /* border-radius: 25px; */
+  /* border: 1.5px solid #9ba0b3; */
+}
+
+.switch span {
+  margin-top: 5px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid teal;
+  border-right: 2px solid teal;
+  transform: rotate(135deg);
+  transition: all 0.2s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.switch label {
+  cursor: pointer;
+  color: teal;
+  width: 60px;
+  line-height: 20px;
+  transition: all 0.2s ease;
+}
+label[for="desc"] {
+  position: absolute;
+  left: 0px;
+  bottom: 9px;
+  color: #9ba0b3;
+}
+label[for="asc"] {
+  position: absolute;
+  right: 0px;
+  bottom: 9px;
+  color: #9ba0b3;
+}
+
+#asc:checked ~ .switch {
+  background: #101014;
+}
+#asc:checked ~ .switch span {
+  background: #101014;
+  margin-top: 14px;
+  transform: rotate(-45deg);
+  transition: all 0.2s ease;
+}
+#asc:checked ~ .switch span:after {
+  background: #fff;
+  height: 20px;
+  margin-top: -8px;
+  margin-left: 8px;
+}
+#desc:checked ~ .switch label[for="yes"] {
+  color: #fff;
+}
+#asc:checked ~ .switch label[for="no"] {
+  color: #fff;
+}
