@@ -4,8 +4,6 @@ import "../styling/ArticleList.css";
 import { useFetchArticles } from "../hooks/useFetch";
 import { useState } from "react";
 import { CircularProgress } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleUp, faCircleDown } from "@fortawesome/free-regular-svg-icons";
 
 function ArticleList() {
   const { topic } = useParams();
@@ -42,7 +40,7 @@ function ArticleList() {
     }
   };
 
-  if (isLoading) return <CircularProgress sx={{ color: teal }} />;
+  if (isLoading) return <CircularProgress sx={{ color: teal, pt: 5 }} />;
   return (
     <main>
       <form className="sort">

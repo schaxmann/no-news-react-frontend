@@ -51,7 +51,7 @@ nav {
   position: relative;
 }
 
-nav a {
+.navLink {
   color: #9ba0b3;
   text-decoration: none;
   display: block;
@@ -88,7 +88,7 @@ nav a {
   color: #9ba0b3;
 }
 
-nav a::after {
+.navLink::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -138,7 +138,7 @@ nav a:focus::after {
   max-width: 85%;
   display: block;
   text-align: right;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   color: #9ba0b3;
   font-family: ibm-plex-mono, sans-serif;
 }
@@ -146,7 +146,7 @@ nav a:focus::after {
 .sort button {
   position: absolute;
   top: 11.1rem;
-  right: 13.2rem;
+  right: 15%;
   margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
   background-color: transparent;
@@ -189,7 +189,7 @@ select:hover {
   display: inline-block;
   position: absolute;
   top: 12.85rem;
-  right: 17.2rem;
+  right: 19.5%;
   width: 150px;
   height: 35px;
   text-align: center;
@@ -258,4 +258,12 @@ label[for="asc"] {
 }
 #asc:checked ~ .switch label[for="no"] {
   color: #fff;
+}
+
+.home {
+  all: unset;
+}
+
+.home {
+  cursor: pointer;
 }
