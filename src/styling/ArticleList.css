@@ -144,15 +144,28 @@ nav a:focus::after {
 }
 
 .sort button {
-  position: relative;
-  bottom: 20px;
+  position: absolute;
+  top: 11.1rem;
+  right: 13.2rem;
   margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
+  background-color: transparent;
+  border: 1px solid teal;
+  color: #9ba0b3;
+  font-size: 16px;
+  width: 60px;
+  padding: 0px;
+  padding-bottom: 2px;
+}
+
+.sort button:hover {
+  color: #dddee5;
 }
 
 select {
   font-family: ibm-plex-mono, sans-serif;
-  margin-right: 17rem;
+  margin-right: 14rem;
+  margin-top: 0.35rem;
 }
 
 /* option {
@@ -162,7 +175,8 @@ select {
 .switch {
   display: inline-block;
   position: absolute;
-  right: 18.5rem;
+  top: 12.75rem;
+  right: 17.2rem;
   width: 150px;
   height: 35px;
   text-align: center;
@@ -205,6 +219,10 @@ label[for="asc"] {
   right: 0px;
   bottom: 9px;
   color: #9ba0b3;
+}
+
+label:hover {
+  color: #dddee5;
 }
 
 #asc:checked ~ .switch {
