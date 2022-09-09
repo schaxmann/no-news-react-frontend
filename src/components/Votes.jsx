@@ -30,6 +30,8 @@ function Votes(props) {
       });
   };
 
+  const font = "ibm-plex-mono, sans-serif";
+
   return (
     <section className="votes">
       {/* <h3>Curent Votes: {newVotes}</h3> */}
@@ -42,7 +44,7 @@ function Votes(props) {
         onClick={() => {
           voteHandler();
         }}
-        sx={{ mt: 5 }}
+        sx={{ mt: 5, fontFamily: font }}
       >
         {newVotes}
       </Button>

@@ -6,7 +6,7 @@
   font-size: 16px;
   color: #9ba0b3;
   font-family: ibm-plex-mono, sans-serif;
-  margin-top: 4.8rem;
+  margin-top: 5rem;
 }
 
 @media (max-width: 800px) {
@@ -53,9 +53,10 @@ h4 {
 }
 
 .comment {
-  color: #f4f1d0;
+  color: #dddee5;
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 500;
 }
-
 /* .comments li {
   background-color: azure;
   max-width: 50%;
@@ -108,11 +109,15 @@ form {
 
 textarea {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  margin-top: 2em;
+  font-family: ibm-plex-mono, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border: 0;
+  border-bottom: 3px solid teal;
+  background-color: transparent;
+  color: #9ba0b3;
+  font-size: 16px;
 }
 
 .topicLink {

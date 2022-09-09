@@ -1,5 +1,5 @@
 import "../styling/ArticlePage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function CommentPost(props) {
@@ -7,6 +7,7 @@ function CommentPost(props) {
   const [newComment, setNewComment] = useState("");
   const [err, setErr] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [rowNum, setRowNum] = useState(1);
 
   const postHandler = () => {
     setDisabled(true);
@@ -30,19 +31,36 @@ function CommentPost(props) {
       });
   };
 
+  useEffect(() => {
+    console.log(rowNum);
+  }, [rowNum]);
+
   return (
     <fieldset className="postComment">
       <h3 className="comment">Leave a Comment: </h3>
       <h4 className="comment">Logged In As: grumpy19</h4>
       <form>
         <textarea
-          rows="2"
+          rows={rowNum}
           cols="50"
           onChange={(event) => {
             setNewComment(event.target.value);
+            if (event.target.value.length < 1) {
+              setRowNum(1);
+            }
+            if (event.target.value.length > 48 && rowNum === 1) {
+              setRowNum(rowNum + 1);
+            }
+            if (event.target.value.length > 98 && rowNum === 2) {
+              setRowNum(rowNum + 1);
+            }
+            if (event.target.value.length > 148 && rowNum === 3) {
+              setRowNum(rowNum + 1);
+            }
           }}
           placeholder="Enter your comment..."
           value={newComment}
+          maxLength="180"
         />
       </form>
       <button
