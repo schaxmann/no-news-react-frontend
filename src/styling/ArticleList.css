@@ -160,6 +160,7 @@ nav a:focus::after {
 
 .sort button:hover {
   color: #dddee5;
+  cursor: pointer;
 }
 
 select {
@@ -221,7 +222,7 @@ label[for="asc"] {
   color: #9ba0b3;
 }
 
-label:hover {
+.switch label:hover {
   color: #dddee5;
 }
 
