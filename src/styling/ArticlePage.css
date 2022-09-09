@@ -149,7 +149,7 @@ textarea {
   padding-top: 2px;
 }
 
-.post button:hover {
+.post:hover {
   color: #dddee5;
   cursor: pointer;
 }
