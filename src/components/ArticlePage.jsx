@@ -13,9 +13,9 @@ import Typography from "@mui/joy/Typography";
 function ArticlePage() {
   const { article } = useParams();
   const { currentArticle, isLoading } = useFetchArticle(article);
-  const cream = "#f4f1d0";
+  const teal = "teal";
 
-  if (isLoading) return <CircularProgress sx={{ color: cream }} />;
+  if (isLoading) return <CircularProgress sx={{ color: teal }} />;
   return (
     <main>
       <article className="mainArticles">

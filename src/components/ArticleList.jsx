@@ -17,7 +17,7 @@ function ArticleList() {
   const [isChecked, setIsChecked] = useState("desc");
   const [selector, setSelector] = useState("created_at");
 
-  const cream = "#f4f1d0";
+  const teal = "teal";
 
   const sortHandler = (event) => {
     event.preventDefault();
@@ -40,7 +40,7 @@ function ArticleList() {
     }
   };
 
-  if (isLoading) return <CircularProgress sx={{ color: cream }} />;
+  if (isLoading) return <CircularProgress sx={{ color: teal }} />;
   return (
     <main>
       <form className="sort">

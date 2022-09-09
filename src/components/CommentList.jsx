@@ -7,9 +7,9 @@ import { Box } from "@mui/joy";
 function CommentList(props) {
   const { article, hasCommented, setHasCommented } = props;
   const { commentList, isLoading } = useFetchComments(article, hasCommented);
-  const cream = "#f4f1d0";
+  const teal = "teal";
 
-  if (isLoading) return <CircularProgress sx={{ color: cream }} />;
+  if (isLoading) return <CircularProgress sx={{ color: teal }} />;
   return (
     <ul id="commentList">
       <Box

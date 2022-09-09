@@ -76,6 +76,10 @@ nav a {
   right: 0;
 }
 
+.fa {
+  padding-right: 5px;
+}
+
 .logo span {
   color: #9ba0b3;
 }
