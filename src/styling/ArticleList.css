@@ -145,7 +145,7 @@ nav a:focus::after {
 
 .sort button {
   position: absolute;
-  top: 11.1rem;
+  top: 11.2rem;
   right: 13.2rem;
   margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
@@ -156,6 +156,7 @@ nav a:focus::after {
   width: 60px;
   padding: 0px;
   padding-bottom: 2px;
+  padding-top: 2px;
 }
 
 .sort button:hover {
@@ -167,6 +168,17 @@ select {
   font-family: ibm-plex-mono, sans-serif;
   margin-right: 14rem;
   margin-top: 0.35rem;
+  font-size: 16px;
+  background-color: transparent;
+  color: #9ba0b3;
+  border: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid teal;
+}
+
+select:hover {
+  color: #dddee5;
+  cursor: pointer;
 }
 
 /* option {
@@ -176,7 +188,7 @@ select {
 .switch {
   display: inline-block;
   position: absolute;
-  top: 12.75rem;
+  top: 12.9rem;
   right: 17.2rem;
   width: 150px;
   height: 35px;

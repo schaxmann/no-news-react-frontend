@@ -7,7 +7,7 @@ function Navbar() {
     <nav>
       <div className="logo">
         <FontAwesomeIcon className="fa" icon={faBellSlash} />
-        NONEWS <span>// IS GOOD NEWS</span>
+        NO NEWS <span>// IS GOOD NEWS</span>
       </div>
       <Link to="/">ALL ARTICLES</Link>
       <Link to="/coding">CODING</Link>
