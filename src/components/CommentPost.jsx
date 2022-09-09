@@ -31,10 +31,6 @@ function CommentPost(props) {
       });
   };
 
-  useEffect(() => {
-    console.log(rowNum);
-  }, [rowNum]);
-
   return (
     <fieldset className="postComment">
       <h3 className="comment">Leave a Comment: </h3>
@@ -64,6 +60,7 @@ function CommentPost(props) {
         />
       </form>
       <button
+        className="post"
         disabled={disabled}
         onClick={() => {
           postHandler();

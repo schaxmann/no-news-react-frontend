@@ -110,6 +110,7 @@ form {
 textarea {
   margin: 0;
   margin-top: 2em;
+  margin-bottom: 2em;
   font-family: ibm-plex-mono, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -128,4 +129,27 @@ textarea {
 .topicLink:hover {
   cursor: pointer;
   color: #dddee5;
+}
+
+.loader {
+  text-align: center;
+  display: block;
+}
+
+.post {
+  margin-left: 0.5em;
+  font-family: ibm-plex-mono, sans-serif;
+  background-color: transparent;
+  border: 1px solid teal;
+  color: #9ba0b3;
+  font-size: 16px;
+  width: 130px;
+  padding: 0px;
+  padding-bottom: 4px;
+  padding-top: 2px;
+}
+
+.post button:hover {
+  color: #dddee5;
+  cursor: pointer;
 }

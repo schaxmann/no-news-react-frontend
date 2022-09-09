@@ -28,6 +28,7 @@ import {
   faRightLong,
   faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
+import { CenterFocusStrong } from "@mui/icons-material";
 
 function ArticlePage() {
   const { article } = useParams();
@@ -57,7 +58,12 @@ function ArticlePage() {
     return monthNames[monthIndex] + " " + day + " " + year;
   }
 
-  if (isLoading) return <CircularProgress sx={{ color: teal }} />;
+  if (isLoading)
+    return (
+      <div id="loader">
+        <CircularProgress sx={{ color: teal }} />
+      </div>
+    );
   return (
     <main>
       <article className="mainArticles">

@@ -9,7 +9,12 @@ function CommentList(props) {
   const { commentList, isLoading } = useFetchComments(article, hasCommented);
   const teal = "teal";
 
-  if (isLoading) return <CircularProgress sx={{ color: teal }} />;
+  if (isLoading)
+    return (
+      <div className="loader">
+        <CircularProgress sx={{ color: teal }} />
+      </div>
+    );
   return (
     <ul id="commentList">
       <Box

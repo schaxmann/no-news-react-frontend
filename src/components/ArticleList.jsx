@@ -26,7 +26,6 @@ function ArticleList() {
   };
 
   const handleChange = (event) => {
-    console.log(sorter);
     if (event.target.id === "sortBy") {
       const newSorter = { ...sorter };
       newSorter.sort_by = event.target.value;
@@ -40,7 +39,7 @@ function ArticleList() {
     }
   };
 
-  if (isLoading) return <CircularProgress sx={{ color: teal, pt: 5 }} />;
+  if (isLoading) return <CircularProgress sx={{ color: teal, mt: 2 }} />;
   return (
     <main>
       <form className="sort">
