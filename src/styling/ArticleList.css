@@ -145,7 +145,7 @@ nav a:focus::after {
 
 .sort button {
   position: absolute;
-  top: 11.2rem;
+  top: 11.1rem;
   right: 13.2rem;
   margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
@@ -155,7 +155,7 @@ nav a:focus::after {
   font-size: 16px;
   width: 60px;
   padding: 0px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   padding-top: 2px;
 }
 
@@ -188,7 +188,7 @@ select:hover {
 .switch {
   display: inline-block;
   position: absolute;
-  top: 12.9rem;
+  top: 12.85rem;
   right: 17.2rem;
   width: 150px;
   height: 35px;
