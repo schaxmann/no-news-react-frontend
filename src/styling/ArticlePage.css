@@ -120,6 +120,9 @@ textarea {
   background-color: transparent;
   color: #9ba0b3;
   font-size: 16px;
+  resize: none;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 textarea:focus {

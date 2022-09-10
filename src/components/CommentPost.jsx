@@ -41,22 +41,28 @@ function CommentPost(props) {
           cols="50"
           onChange={(event) => {
             setNewComment(event.target.value);
-            // if (event.target.value.length < 1) {
-            //   setRowNum(1);
-            // }
-            if (event.target.value.length > 48 && rowNum === 1) {
-              setRowNum(rowNum + 1);
+            if (event.target.value.length < 52) {
+              setRowNum(1);
             }
-            if (event.target.value.length > 98 && rowNum === 2) {
-              setRowNum(rowNum + 1);
+            if (
+              (event.target.value.length > 51 && rowNum === 1) ||
+              (event.target.value.length < 105 && rowNum === 3)
+            ) {
+              setRowNum(2);
             }
-            if (event.target.value.length > 148 && rowNum === 3) {
-              setRowNum(rowNum + 1);
+            if (
+              (event.target.value.length > 102 && rowNum === 2) ||
+              (event.target.value.length < 154 && rowNum === 4)
+            ) {
+              setRowNum(3);
+            }
+            if (event.target.value.length > 153 && rowNum === 3) {
+              setRowNum(4);
             }
           }}
           placeholder="Enter your comment..."
           value={newComment}
-          maxLength="180"
+          maxLength="204"
         />
       </form>
       <button
