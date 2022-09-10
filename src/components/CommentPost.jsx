@@ -40,13 +40,12 @@ function CommentPost(props) {
           rows={rowNum}
           cols="50"
           onChange={(event) => {
-            setNewComment(event.target.value);
             if (event.target.value.length < 52) {
               setRowNum(1);
             }
             if (
               (event.target.value.length > 51 && rowNum === 1) ||
-              (event.target.value.length < 105 && rowNum === 3)
+              (event.target.value.length < 103 && rowNum === 3)
             ) {
               setRowNum(2);
             }
@@ -59,6 +58,7 @@ function CommentPost(props) {
             if (event.target.value.length > 153 && rowNum === 3) {
               setRowNum(4);
             }
+            setNewComment(event.target.value);
           }}
           placeholder="Enter your comment..."
           value={newComment}
