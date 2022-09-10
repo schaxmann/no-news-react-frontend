@@ -181,6 +181,10 @@ select:hover {
   cursor: pointer;
 }
 
+select:focus {
+  outline: none;
+}
+
 /* option {
   font-family: ibm-plex-mono, sans-serif;
 } */

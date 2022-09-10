@@ -75,6 +75,10 @@
   padding-top: 30px;
 }
 
+.info .fa {
+  margin-right: 4px;
+}
+
 .heart {
   color: #d2232f;
 }

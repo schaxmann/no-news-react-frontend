@@ -8,8 +8,9 @@ function Navbar() {
       <div className="logo">
         <Link to="/" className="home">
           <FontAwesomeIcon className="fa" icon={faBellSlash} />
-          NO NEWS <span>// IS GOOD NEWS</span>
-        </Link>
+          NO NEWS
+        </Link>{" "}
+        <span>// IS GOOD NEWS</span>
       </div>
       <Link to="/" className="navLink">
         ALL ARTICLES

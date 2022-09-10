@@ -56,6 +56,7 @@ h4 {
   color: #dddee5;
   font-family: ibm-plex-mono, sans-serif;
   font-weight: 500;
+  font-size: 20px;
 }
 /* .comments li {
   background-color: azure;
@@ -110,7 +111,7 @@ form {
 textarea {
   margin: 0;
   margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   font-family: ibm-plex-mono, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -119,6 +120,10 @@ textarea {
   background-color: transparent;
   color: #9ba0b3;
   font-size: 16px;
+}
+
+textarea:focus {
+  outline: none;
 }
 
 .topicLink {

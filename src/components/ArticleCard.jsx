@@ -58,11 +58,11 @@ function ArticleCard(props) {
         </h3>
         <div className="info">
           <h4>
-            <FontAwesomeIcon className="fa" icon={faCalendar} />{" "}
+            <FontAwesomeIcon className="fa" icon={faCalendar} />
             {formatDate(new Date(article.created_at.split("T")[0]))}
           </h4>
           <h4>
-            <FontAwesomeIcon className="fa" icon={faPenToSquare} />{" "}
+            <FontAwesomeIcon className="fa" icon={faPenToSquare} />
             {article.author}
           </h4>
         </div>

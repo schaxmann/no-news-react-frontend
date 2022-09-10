@@ -24,6 +24,7 @@ function CommentPost(props) {
         setDisabled(false);
         setHasCommented(hasCommented + 1);
         setNewComment("");
+        setRowNum(1);
       })
       .catch(() => {
         setErr("Something went wrong, please try again later.");
@@ -34,16 +35,15 @@ function CommentPost(props) {
   return (
     <fieldset className="postComment">
       <h3 className="comment">Leave a Comment: </h3>
-      <h4 className="comment">Logged In As: grumpy19</h4>
       <form>
         <textarea
           rows={rowNum}
           cols="50"
           onChange={(event) => {
             setNewComment(event.target.value);
-            if (event.target.value.length < 1) {
-              setRowNum(1);
-            }
+            // if (event.target.value.length < 1) {
+            //   setRowNum(1);
+            // }
             if (event.target.value.length > 48 && rowNum === 1) {
               setRowNum(rowNum + 1);
             }
