@@ -67,7 +67,7 @@ function ArticlePage() {
   return (
     <main>
       <article className="mainArticles">
-        <h2>{currentArticle.title}</h2>
+        <h2 className="articleTitle">{currentArticle.title}</h2>
         <h4>
           <FontAwesomeIcon className="fa" icon={faCalendar} />{" "}
           {formatDate(new Date(currentArticle.created_at.split("T")[0]))}

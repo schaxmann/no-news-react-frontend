@@ -90,7 +90,7 @@ function ArticleCard(props) {
           </p>
           <p>|</p>
           <Link className="articleLink" to={`/articles/${article.article_id}`}>
-            <FontAwesomeIcon className="fa-teal" icon={faArrowRightLong} />
+            <FontAwesomeIcon className="fa-arrow" icon={faArrowRightLong} />
           </Link>
         </div>
       </li>

@@ -16,9 +16,11 @@
   }
 }
 
-.mainArticles h2,
-p {
+.mainArticles p {
   color: #dddee5;
+  border-bottom: 2px solid teal;
+  padding-bottom: 15px;
+  hyphens: auto;
 }
 
 /* h3,
@@ -42,6 +44,10 @@ h4 {
   font-size: 1.3em;
 }
 
+.articleTitle {
+  color: #dddee5;
+}
+
 .comments ul {
   padding: 0;
   margin: auto;
@@ -50,9 +56,9 @@ h4 {
 }
 
 .commentBox {
-  border: 2px solid teal;
   color: #9ba0b3;
   font-family: ibm-plex-mono, sans-serif;
+  /* border: 1px solid teal; */
 }
 
 .commentBody {
@@ -62,6 +68,8 @@ h4 {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  border-bottom: 2px solid teal;
+  padding-bottom: 15px;
 }
 
 .commentInfo {
@@ -78,7 +86,7 @@ h4 {
 .commentInfo p {
   color: #9ba0b3;
   margin: 0;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .bold {

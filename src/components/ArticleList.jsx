@@ -42,6 +42,7 @@ function ArticleList() {
   if (isLoading) return <CircularProgress sx={{ color: teal, mt: 2 }} />;
   return (
     <main>
+      {isLoading === "true" && <CircularProgress sx={{ color: teal, mt: 2 }} />}
       <form className="sort">
         <label htmlFor="sortBy">Sort By: </label>
         <select

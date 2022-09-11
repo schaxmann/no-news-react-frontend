@@ -32,6 +32,7 @@
 
 .cardLink {
   all: unset;
+  border-bottom: 5px solid #101014;
 }
 
 .cardLink:hover,
@@ -48,9 +49,19 @@
   background-color: rgba(0, 128, 128, 0.2);
 }
 
-.fa-teal {
-  color: #dddee5;
+.fa-arrow {
+  color: #9ba0b3;
 }
+
+/* .fa-arrow:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+} */
 
 .stats {
   display: flex;
