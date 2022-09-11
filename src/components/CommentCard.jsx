@@ -98,9 +98,10 @@ function CommentCard(props) {
                     stateHandler(event);
                   }}
                 >
-                  <FontAwesomeIcon className="fa" icon={faTrashCan} /> Delete
+                  <FontAwesomeIcon className="fa" icon={faTrashCan} />
+                  Delete
                 </button>
-                <p>
+                <p className="infoDate">
                   <FontAwesomeIcon className="fa" icon={faCalendar} />
                   {formatDate(new Date(comment.created_at.split("T")[0]))}{" "}
                 </p>
@@ -123,7 +124,7 @@ function CommentCard(props) {
                   <FontAwesomeIcon className="fa" icon={faUser} />
                   {comment.author}
                 </p>
-                <p>
+                <p className="infoDate">
                   <FontAwesomeIcon className="fa" icon={faCalendar} />
                   {formatDate(new Date(comment.created_at.split("T")[0]))}{" "}
                 </p>
