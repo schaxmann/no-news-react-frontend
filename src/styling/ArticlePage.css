@@ -160,20 +160,15 @@ form {
   display: inline;
 }
 
-.postComment button {
-  display: block;
-  margin: AUTO;
-}
-
 textarea {
   margin: 0;
   margin-top: 2em;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
   font-family: ibm-plex-mono, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: 0;
-  border-bottom: 3px solid teal;
+  border-bottom: 2px solid teal;
   background-color: transparent;
   color: #9ba0b3;
   font-size: 16px;
@@ -201,7 +196,32 @@ textarea:focus {
   display: block;
 }
 
+.postComment {
+  display: flex;
+  /* width: 50%; */
+  justify-content: center;
+  align-items: center;
+}
+
 .post {
+  margin-left: 1.5em;
+  font-family: ibm-plex-mono, sans-serif;
+  background-color: transparent;
+  border: 1px solid teal;
+  color: #9ba0b3;
+  font-size: 16px;
+  width: 170px;
+  padding: 0px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.post:hover {
+  color: #dddee5;
+  cursor: pointer;
+}
+
+.voteButton {
   margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
   background-color: transparent;
@@ -214,7 +234,59 @@ textarea:focus {
   padding-top: 2px;
 }
 
-.post:hover {
+.voteHeart {
+  color: #d2232f;
+}
+
+.voteButton:hover {
   color: #dddee5;
   cursor: pointer;
+}
+
+.voteButton:hover .voteHeart {
+  color: #dddee5;
+  cursor: pointer;
+}
+
+.voteButtonClicked {
+  margin-left: 0.5em;
+  font-family: ibm-plex-mono, sans-serif;
+  background-color: transparent;
+  border: 1px solid teal;
+  color: #9ba0b3;
+  font-size: 16px;
+  width: 130px;
+  padding: 0px;
+  padding-bottom: 4px;
+  padding-top: 2px;
+  color: #9ba0b3;
+}
+
+.voteButtonClicked:hover {
+  margin-left: 0.5em;
+  font-family: ibm-plex-mono, sans-serif;
+  background-color: transparent;
+  border: 1px solid teal;
+  color: #9ba0b3;
+  font-size: 16px;
+  width: 130px;
+  padding: 0px;
+  padding-bottom: 4px;
+  padding-top: 2px;
+}
+
+.lengthCounter {
+  font-size: 10px;
+  margin: 2px auto;
+  display: block;
+}
+
+.envelope {
+  font-size: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.fa-pen {
+  margin-right: 3px;
 }

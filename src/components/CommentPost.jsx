@@ -1,6 +1,8 @@
 import "../styling/ArticlePage.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 
 function CommentPost(props) {
   let { article, setHasCommented, hasCommented } = props;
@@ -34,35 +36,35 @@ function CommentPost(props) {
 
   return (
     <fieldset className="postComment">
-      <h3 className="comment">Leave a Comment: </h3>
+      {/* <h3 className="comment">Leave a Comment: </h3> */}
       <form>
         <textarea
           rows={rowNum}
-          cols="50"
+          cols="49"
           onChange={(event) => {
-            if (event.target.value.length < 52) {
+            if (event.target.value.length < 51) {
               setRowNum(1);
             }
             if (
-              (event.target.value.length > 51 && rowNum === 1) ||
-              (event.target.value.length < 103 && rowNum === 3)
+              (event.target.value.length > 50 && rowNum === 1) ||
+              (event.target.value.length < 101 && rowNum === 3)
             ) {
               setRowNum(2);
             }
             if (
-              (event.target.value.length > 102 && rowNum === 2) ||
-              (event.target.value.length < 154 && rowNum === 4)
+              (event.target.value.length > 100 && rowNum === 2) ||
+              (event.target.value.length < 151 && rowNum === 4)
             ) {
               setRowNum(3);
             }
-            if (event.target.value.length > 153 && rowNum === 3) {
+            if (event.target.value.length > 150 && rowNum === 3) {
               setRowNum(4);
             }
             setNewComment(event.target.value);
           }}
           placeholder="Enter your comment..."
           value={newComment}
-          maxLength="204"
+          maxLength="200"
         />
       </form>
       <button
@@ -72,9 +74,13 @@ function CommentPost(props) {
           postHandler();
         }}
       >
-        Post Comment
+        Post Comment{" "}
+        <span className="lengthCounter">
+          <FontAwesomeIcon className="fa-pen" icon={faPenToSquare} />
+          {newComment.length}/200
+        </span>
       </button>
-      {err ? <p>{err}</p> : <p></p>}
+      {err && <p>{err}</p>}
     </fieldset>
   );
 }
