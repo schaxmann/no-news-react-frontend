@@ -1,8 +1,13 @@
-import { useParams, useSearchParams } from "react-router-dom";
+import {
+  Link,
+  useParams,
+  useSearchParams,
+  useLocation,
+} from "react-router-dom";
 import ArticleCard from "./ArticleCard";
 import "../styling/ArticleList.css";
 import { useFetchArticles } from "../hooks/useFetch";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CircularProgress } from "@mui/material";
 
 function ArticleList() {
@@ -16,7 +21,10 @@ function ArticleList() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isChecked, setIsChecked] = useState("desc");
   const [selector, setSelector] = useState("created_at");
+  const [pageLow, setpageLow] = useState(0);
+  const [pageHigh, setpageHigh] = useState(12);
 
+  const location = useLocation();
   const teal = "teal";
 
   const sortHandler = (event) => {
@@ -24,6 +32,21 @@ function ArticleList() {
     setSearchParams(sorter);
     setSubmitSorter(sorter);
   };
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setpageLow(0);
+      setpageHigh(12);
+    }
+    if (location.pathname === "/2") {
+      setpageLow(12);
+      setpageHigh(24);
+    }
+    if (location.pathname === "/3") {
+      setpageLow(24);
+      setpageHigh(36);
+    }
+  }, [location.pathname]);
 
   const handleChange = (event) => {
     if (event.target.id === "sortBy") {
@@ -95,11 +118,16 @@ function ArticleList() {
       </form>
       <section>
         <ul id="articleList">
-          {articleList.map((article) => {
+          {articleList.slice(pageLow, pageHigh).map((article) => {
             return <ArticleCard key={article.article_id} article={article} />;
           })}
         </ul>
       </section>
+      <div className="pageMenu">
+        <Link to="/">1</Link>
+        <Link to="/2">2</Link>
+        <Link to="/3">3</Link>
+      </div>
     </main>
   );
 }

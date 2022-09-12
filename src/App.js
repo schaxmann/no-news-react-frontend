@@ -13,6 +13,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<ArticleList />} />
+            <Route path="/2" element={<ArticleList />} />
+            <Route path="/3" element={<ArticleList />} />
             <Route path="/:topic" element={<ArticleList />} />
             <Route path="/articles/:article" element={<ArticlePage />} />
           </Routes>
