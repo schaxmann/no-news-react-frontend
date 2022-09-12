@@ -228,8 +228,9 @@ textarea:focus {
   border: 1px solid teal;
   color: #9ba0b3;
   font-size: 16px;
-  width: 130px;
-  padding: 0px;
+  width: 80px;
+  height: 40px;
+  padding: 0;
   padding-bottom: 4px;
   padding-top: 2px;
 }
@@ -246,6 +247,14 @@ textarea:focus {
 .voteButton:hover .voteHeart {
   color: #dddee5;
   cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .voteButtonClicked {
@@ -255,7 +264,8 @@ textarea:focus {
   border: 1px solid teal;
   color: #9ba0b3;
   font-size: 16px;
-  width: 130px;
+  width: 80px;
+  height: 40px;
   padding: 0px;
   padding-bottom: 4px;
   padding-top: 2px;
@@ -269,11 +279,6 @@ textarea:focus {
   background-color: transparent;
   border: 1px solid teal;
   color: #9ba0b3;
-  font-size: 16px;
-  width: 130px;
-  padding: 0px;
-  padding-bottom: 4px;
-  padding-top: 2px;
 }
 
 .lengthCounter {
