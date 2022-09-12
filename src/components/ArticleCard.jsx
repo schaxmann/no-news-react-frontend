@@ -89,9 +89,7 @@ function ArticleCard(props) {
             {article.comment_count}
           </p>
           <p>|</p>
-          <Link className="articleLink" to={`/articles/${article.article_id}`}>
-            <FontAwesomeIcon className="fa-arrow" icon={faArrowRightLong} />
-          </Link>
+          <FontAwesomeIcon className="fa-arrow" icon={faArrowRightLong} />
         </div>
       </li>
     </Link>

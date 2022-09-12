@@ -10,6 +10,8 @@ import { useFetchArticles } from "../hooks/useFetch";
 import { useState, useEffect } from "react";
 import { CircularProgress } from "@mui/material";
 
+const re = new RegExp("/(^=[A-Za-z0-9]&$)w+/g");
+
 function ArticleList() {
   const { topic } = useParams();
   const [sorter, setSorter] = useState({
@@ -34,7 +36,12 @@ function ArticleList() {
   };
 
   useEffect(() => {
-    if (location.pathname === "/") {
+    if (
+      location.pathname === "/" ||
+      location.pathname === "/coding" ||
+      location.pathname === "/football" ||
+      location.pathname === "/cooking"
+    ) {
       setpageLow(0);
       setpageHigh(12);
     }
@@ -80,7 +87,7 @@ function ArticleList() {
           <option value="votes">Vote Count</option>
         </select>
 
-        <div class="toggle-radio">
+        <div className="toggle-radio">
           <input
             type="radio"
             name="order"
@@ -101,9 +108,9 @@ function ArticleList() {
             value="asc"
             checked={"asc" === isChecked}
           />
-          <div class="switch">
-            <label for="desc">Desc</label>
-            <label for="asc">Asc</label>
+          <div className="switch">
+            <label htmlFor="desc">Desc</label>
+            <label htmlFor="asc">Asc</label>
             <span></span>
           </div>
         </div>
@@ -123,11 +130,19 @@ function ArticleList() {
           })}
         </ul>
       </section>
-      <div className="pageMenu">
-        <Link to="/">1</Link>
-        <Link to="/2">2</Link>
-        <Link to="/3">3</Link>
-      </div>
+      {location.pathname === "/" ||
+      location.pathname === "/2" ||
+      location.pathname === "/3" ? (
+        <div className="pageMenu">
+          <Link to={`/${location.search}`}>1</Link>
+          <Link to={`/2${location.search}`}>2</Link>
+          <Link to={`/3${location.search}`}>3</Link>
+        </div>
+      ) : (
+        <div className="SinglePageMenu">
+          <Link to={`/${location.search}`}>1</Link>
+        </div>
+      )}
     </main>
   );
 }
