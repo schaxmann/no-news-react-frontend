@@ -274,7 +274,7 @@ label[for="asc"] {
   font-size: 16px;
   pointer-events: none;
   padding: 3px;
-  border-bottom: 2px solid teal;
+  border-bottom: 1.5px solid teal;
   margin: 0px 5px;
 }
 
