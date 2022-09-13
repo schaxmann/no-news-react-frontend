@@ -25,6 +25,9 @@ function ArticleList() {
   const [selector, setSelector] = useState("created_at");
   const [pageLow, setpageLow] = useState(0);
   const [pageHigh, setpageHigh] = useState(12);
+  const [page1, setpage1] = useState("underlineLink");
+  const [page2, setpage2] = useState("normalLink");
+  const [page3, setpage3] = useState("normalLink");
 
   const location = useLocation();
   const teal = "teal";
@@ -44,14 +47,23 @@ function ArticleList() {
     ) {
       setpageLow(0);
       setpageHigh(12);
+      setpage3("normalLink");
+      setpage2("normalLink");
+      setpage1("underlineLink");
     }
     if (location.pathname === "/2") {
       setpageLow(12);
       setpageHigh(24);
+      setpage1("normalLink");
+      setpage3("normalLink");
+      setpage2("underlineLink");
     }
     if (location.pathname === "/3") {
       setpageLow(24);
       setpageHigh(36);
+      setpage1("normalLink");
+      setpage2("normalLink");
+      setpage3("underlineLink");
     }
   }, [location.pathname]);
 
@@ -134,13 +146,21 @@ function ArticleList() {
       location.pathname === "/2" ||
       location.pathname === "/3" ? (
         <div className="pageMenu">
-          <Link to={`/${location.search}`}>1</Link>
-          <Link to={`/2${location.search}`}>2</Link>
-          <Link to={`/3${location.search}`}>3</Link>
+          <Link className={page1} to={`/${location.search}`}>
+            1
+          </Link>
+          <Link className={page2} to={`/2${location.search}`}>
+            2
+          </Link>
+          <Link className={page3} to={`/3${location.search}`}>
+            3
+          </Link>
         </div>
       ) : (
         <div className="SinglePageMenu">
-          <Link to={`/${location.search}`}>1</Link>
+          <Link className="underlineLink" to={`/${location.search}`}>
+            1
+          </Link>
         </div>
       )}
     </main>

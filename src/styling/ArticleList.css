@@ -266,3 +266,38 @@ label[for="asc"] {
 .home {
   cursor: pointer;
 }
+
+.underlineLink {
+  all: unset;
+  font-family: ibm-plex-mono, sans-serif;
+  color: #9ba0b3;
+  font-size: 16px;
+  pointer-events: none;
+  padding: 3px;
+  border-bottom: 2px solid teal;
+  margin: 0px 5px;
+}
+
+.normalLink {
+  all: unset;
+  font-family: ibm-plex-mono, sans-serif;
+  color: #9ba0b3;
+  font-size: 16px;
+  padding: 3px;
+  margin: 0px 5px;
+}
+
+.normalLink:hover {
+  all: unset;
+  font-family: ibm-plex-mono, sans-serif;
+  color: #dddee5;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 3px;
+  margin: 0px 5px;
+}
+
+.pageMenu,
+.SinglePageMenu {
+  margin-top: 1em;
+}
