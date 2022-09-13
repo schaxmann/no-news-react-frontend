@@ -274,7 +274,6 @@ textarea:focus {
 }
 
 .voteButtonClicked:hover {
-  cursor: not-allowed;
   margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
   background-color: transparent;
@@ -296,4 +295,12 @@ textarea:focus {
 
 .fa-pen {
   margin-right: 3px;
+}
+
+.errorPara {
+  font-family: ibm-plex-mono, sans-serif;
+  color: #9ba0b3;
+  font-size: 16px;
+  display: block;
+  text-align: center;
 }

@@ -35,53 +35,55 @@ function CommentPost(props) {
   };
 
   return (
-    <fieldset className="postComment">
-      {/* <h3 className="comment">Leave a Comment: </h3> */}
-      <form>
-        <textarea
-          rows={rowNum}
-          cols="49"
-          onChange={(event) => {
-            if (event.target.value.length < 51) {
-              setRowNum(1);
-            }
-            if (
-              (event.target.value.length > 50 && rowNum === 1) ||
-              (event.target.value.length < 101 && rowNum === 3)
-            ) {
-              setRowNum(2);
-            }
-            if (
-              (event.target.value.length > 100 && rowNum === 2) ||
-              (event.target.value.length < 151 && rowNum === 4)
-            ) {
-              setRowNum(3);
-            }
-            if (event.target.value.length > 150 && rowNum === 3) {
-              setRowNum(4);
-            }
-            setNewComment(event.target.value);
+    <>
+      <fieldset className="postComment">
+        {/* <h3 className="comment">Leave a Comment: </h3> */}
+        <form>
+          <textarea
+            rows={rowNum}
+            cols="49"
+            onChange={(event) => {
+              if (event.target.value.length < 51) {
+                setRowNum(1);
+              }
+              if (
+                (event.target.value.length > 50 && rowNum === 1) ||
+                (event.target.value.length < 101 && rowNum === 3)
+              ) {
+                setRowNum(2);
+              }
+              if (
+                (event.target.value.length > 100 && rowNum === 2) ||
+                (event.target.value.length < 151 && rowNum === 4)
+              ) {
+                setRowNum(3);
+              }
+              if (event.target.value.length > 150 && rowNum === 3) {
+                setRowNum(4);
+              }
+              setNewComment(event.target.value);
+            }}
+            placeholder="Enter your comment..."
+            value={newComment}
+            maxLength="200"
+          />
+        </form>
+        <button
+          className="post"
+          disabled={disabled}
+          onClick={() => {
+            postHandler();
           }}
-          placeholder="Enter your comment..."
-          value={newComment}
-          maxLength="200"
-        />
-      </form>
-      <button
-        className="post"
-        disabled={disabled}
-        onClick={() => {
-          postHandler();
-        }}
-      >
-        Post Comment{" "}
-        <span className="lengthCounter">
-          <FontAwesomeIcon className="fa-pen" icon={faPenToSquare} />
-          {newComment.length}/200
-        </span>
-      </button>
-      {err && <p>{err}</p>}
-    </fieldset>
+        >
+          Post Comment{" "}
+          <span className="lengthCounter">
+            <FontAwesomeIcon className="fa-pen" icon={faPenToSquare} />
+            {newComment.length}/200
+          </span>
+        </button>
+      </fieldset>
+      {err && <p className="errorPara">{err}</p>}
+    </>
   );
 }
 
