@@ -304,3 +304,22 @@ textarea:focus {
   display: block;
   text-align: center;
 }
+
+.socialLink {
+  all: unset;
+  font-family: ibm-plex-mono, sans-serif;
+  color: #9ba0b3;
+  font-size: 16px;
+  padding: 3px;
+  margin: 0px 5px;
+}
+
+.socialLink:hover {
+  all: unset;
+  font-family: ibm-plex-mono, sans-serif;
+  color: #dddee5;
+  font-size: 16px;
+  padding: 3px;
+  margin: 0px 5px;
+  cursor: pointer;
+}

@@ -26,7 +26,7 @@ function Navbar() {
       </Link>
       <div className="user">
         <span>LOGGED IN AS </span>
-        <Link to="#" className="home">
+        <Link to="/user/grumpy19" className="home">
           <FontAwesomeIcon className="fa" icon={faUserCircle} />
           GRUMPY19
         </Link>

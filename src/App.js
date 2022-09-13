@@ -4,6 +4,7 @@ import ArticleList from "./components/ArticleList";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ArticlePage from "./components/ArticlePage";
 import { CssVarsProvider } from "@mui/joy/styles";
+import EasterEgg from "./components/EasterEgg";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/3" element={<ArticleList />} />
             <Route path="/:topic" element={<ArticleList />} />
             <Route path="/articles/:article" element={<ArticlePage />} />
+            <Route path="/user/grumpy19" element={<EasterEgg />} />
           </Routes>
         </div>
       </BrowserRouter>
