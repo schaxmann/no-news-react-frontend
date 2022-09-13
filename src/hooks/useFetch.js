@@ -62,7 +62,7 @@ const useFetchComments = (article, hasCommented) => {
         return data.comments;
       })
       .then((commentsFromApi) => {
-        setCommentList(commentsFromApi);
+        setCommentList(commentsFromApi.reverse());
         setIsLoading(false);
       });
   }, [article, hasCommented]);
