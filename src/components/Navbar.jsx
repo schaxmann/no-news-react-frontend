@@ -8,9 +8,9 @@ function Navbar() {
       <div className="logo">
         <Link to="/" className="home">
           <FontAwesomeIcon className="fa" icon={faBellSlash} />
-          NO NEWS
+          <span className="noNews">NO NEWS</span>
         </Link>{" "}
-        <span>// IS GOOD NEWS</span>
+        <span className="tagline">// IS GOOD NEWS</span>
       </div>
       <Link to="/" className="navLink">
         ALL ARTICLES
@@ -25,10 +25,10 @@ function Navbar() {
         COOKING
       </Link>
       <div className="user">
-        <span>LOGGED IN AS </span>
+        <span className="loggedIn">LOGGED IN AS </span>
         <Link to="/user/grumpy19" className="home">
           <FontAwesomeIcon className="fa" icon={faUserCircle} />
-          GRUMPY19
+          <span className="username">GRUMPY19</span>
         </Link>
       </div>
     </nav>

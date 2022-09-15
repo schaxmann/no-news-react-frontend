@@ -301,3 +301,21 @@ label[for="asc"] {
 .SinglePageMenu {
   margin-top: 1em;
 }
+
+@media (max-width: 1060px) {
+  .tagline {
+    display: none;
+  }
+  .loggedIn {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .username {
+    display: none;
+  }
+  .noNews {
+    display: none;
+  }
+}
