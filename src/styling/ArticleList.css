@@ -57,7 +57,7 @@ nav {
 .logo {
   position: absolute;
   padding: 3.2rem;
-  color: teal;
+  color: #9ba0b3;
   top: 0;
   left: 0;
 }
@@ -65,7 +65,7 @@ nav {
 .user {
   position: absolute;
   padding: 3.2rem;
-  color: teal;
+  color: #9ba0b3;
   top: 0;
   right: 0;
 }
@@ -73,14 +73,14 @@ nav {
 .fa {
   padding-right: 5px;
 }
-
+/* 
 .logo span {
   color: #9ba0b3;
-}
+} */
 
-.user span {
+/* .user span {
   color: #9ba0b3;
-}
+} */
 
 .navLink::after {
   content: "";
@@ -261,10 +261,13 @@ label[for="asc"] {
 
 .home {
   all: unset;
+  color: teal;
 }
 
-.home {
+.home:hover {
+  all: unset;
   cursor: pointer;
+  color: #dddee5;
 }
 
 .underlineLink {
