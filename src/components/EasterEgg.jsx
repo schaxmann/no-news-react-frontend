@@ -56,13 +56,18 @@ function EasterEgg() {
     <main>
       <article className="mainArticles">
         <h2 className="articleTitle">Here, have an Easter Egg</h2>
-        <h4>Unfortunately, grumpy19 isn't real.</h4>
+        <h3>Unfortunately, grumpy19 isn't real.</h3>
         <p>
-          However, Zack (the developer of this website) is.
+          However,{" "}
+          <a className="myName" href="https://www.linkedin.com/in/schaxmann/">
+            Zack Schaxmann{" "}
+          </a>
+          (the developer of this website) is.
           <br />
           <br />
           Whilst he may not be grumpy or 19, he is currently looking for an
-          opportunity within a forward-thinking technology company.
+          opportunity within a forward-thinking environment that encourages
+          novel thinking.
           <br />
           <br />
           If you happen to work for (or recruit for) one, he'd love to hear from

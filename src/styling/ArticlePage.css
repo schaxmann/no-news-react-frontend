@@ -323,3 +323,16 @@ textarea:focus {
   margin: 0px 5px;
   cursor: pointer;
 }
+
+.myName {
+  all: unset;
+  font-family: ibm-plex-mono, sans-serif;
+  color: teal;
+  font-size: 16px;
+}
+
+.myName:hover {
+  all: unset;
+  cursor: pointer;
+  color: #dddee5;
+}
