@@ -122,8 +122,8 @@ function ArticleList() {
           />
           <div className="switch">
             <label htmlFor="desc">Desc</label>
-            <label htmlFor="asc">Asc</label>
             <span></span>
+            <label htmlFor="asc">Asc</label>
           </div>
         </div>
 

@@ -128,9 +128,14 @@ nav a:focus::after {
 }
 
 .sort {
-  margin-top: 5em;
-  max-width: 85%;
-  display: block;
+  /* margin-top: 5em; */
+  margin: 5em auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  gap: 1rem;
+  position: relative;
+  width: 70%;
   text-align: right;
   margin-bottom: 2em;
   color: #9ba0b3;
@@ -138,10 +143,6 @@ nav a:focus::after {
 }
 
 .sort button {
-  position: absolute;
-  top: 11.1rem;
-  right: 15%;
-  margin-left: 0.5em;
   font-family: ibm-plex-mono, sans-serif;
   background-color: transparent;
   border: 1px solid teal;
@@ -160,7 +161,6 @@ nav a:focus::after {
 
 select {
   font-family: ibm-plex-mono, sans-serif;
-  margin-right: 14rem;
   margin-top: 0.35rem;
   font-size: 16px;
   background-color: transparent;
@@ -184,18 +184,16 @@ select:focus {
 } */
 
 .switch {
-  display: inline-block;
-  position: absolute;
-  top: 12.85rem;
-  right: 19.5%;
-  width: 150px;
-  height: 35px;
   text-align: center;
-  margin: -30px 0 0 -75px;
   background: #101014;
   transition: all 0.2s ease;
+  display: inline;
   /* border-radius: 25px; */
   /* border: 1.5px solid #9ba0b3; */
+}
+
+.toggle-radio {
+  display: inline;
 }
 
 .switch span {
@@ -221,15 +219,9 @@ input[type="radio"] {
 }
 
 label[for="desc"] {
-  position: absolute;
-  left: 0px;
-  bottom: 9px;
   color: #9ba0b3;
 }
 label[for="asc"] {
-  position: absolute;
-  right: 0px;
-  bottom: 9px;
   color: #9ba0b3;
 }
 
