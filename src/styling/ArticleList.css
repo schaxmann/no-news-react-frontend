@@ -133,6 +133,7 @@ nav a:focus::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
+  align-items: baseline;
   gap: 1rem;
   position: relative;
   width: 70%;
@@ -372,6 +373,9 @@ label[for="asc"] {
   .navLink {
     display: none;
   }
+  .sort {
+    justify-content: center;
+  }
 }
 
 .arrowDown {
@@ -384,4 +388,20 @@ label[for="asc"] {
   transform: rotate(135deg);
   transition: all 0.2s ease;
   margin-bottom: 3px;
+}
+
+.sort {
+  /* margin-top: 5em; */
+  margin: 5em auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: baseline;
+  gap: 1rem;
+  position: relative;
+  width: 70%;
+  text-align: right;
+  margin-bottom: 2em;
+  color: #9ba0b3;
+  font-family: ibm-plex-mono, sans-serif;
 }
