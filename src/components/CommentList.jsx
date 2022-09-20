@@ -17,25 +17,17 @@ function CommentList(props) {
     );
   return (
     <ul id="commentList">
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(1, minmax(300px, 1fr))",
-          gap: 4,
-        }}
-      >
-        {commentList.map((comment) => {
-          return (
-            <CommentCard
-              key={comment.comment_id}
-              comment={comment}
-              article={article}
-              hasCommented={hasCommented}
-              setHasCommented={setHasCommented}
-            />
-          );
-        })}
-      </Box>
+      {commentList.map((comment) => {
+        return (
+          <CommentCard
+            key={comment.comment_id}
+            comment={comment}
+            article={article}
+            hasCommented={hasCommented}
+            setHasCommented={setHasCommented}
+          />
+        );
+      })}
     </ul>
   );
 }

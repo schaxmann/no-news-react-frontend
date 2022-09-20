@@ -106,7 +106,6 @@ li a {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
@@ -260,21 +259,6 @@ label[for="asc"] {
   }
 }
 
-@media (max-width: 532px) {
-  .sort {
-    flex-direction: column;
-  }
-  .sortButton {
-    margin: 0 auto;
-  }
-  .toggle-radio {
-    margin: 0 auto;
-  }
-  select {
-    margin: 0 auto;
-  }
-}
-
 .home {
   all: unset;
   color: teal;
@@ -361,7 +345,6 @@ label[for="asc"] {
   background-color: #101014;
   color: #9ba0b3;
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding-top: 0.7em;
 }
@@ -427,4 +410,20 @@ label[for="asc"] {
   margin-bottom: 2em;
   color: #9ba0b3;
   font-family: ibm-plex-mono, sans-serif;
+}
+
+@media (max-width: 532px) {
+  .sort {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .sortButton {
+    margin: 0 auto;
+  }
+  .toggle-radio {
+    margin: 0 auto;
+  }
+  select {
+    margin: 0 auto;
+  }
 }
