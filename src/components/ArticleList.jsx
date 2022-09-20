@@ -86,7 +86,9 @@ function ArticleList() {
     <main>
       {isLoading === "true" && <CircularProgress sx={{ color: teal, mt: 2 }} />}
       <form className="sort">
-        <label htmlFor="sortBy">Sort By: </label>
+        <label className="sortTitle" htmlFor="sortBy">
+          Sort By:
+        </label>
         <select
           id="sortBy"
           value={selector}

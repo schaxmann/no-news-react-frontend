@@ -160,6 +160,10 @@ nav a:focus::after {
   cursor: pointer;
 }
 
+.sortTitle {
+  margin-right: -5px;
+}
+
 select {
   font-family: ibm-plex-mono, sans-serif;
   margin-top: 0.35rem;
@@ -186,7 +190,7 @@ select:focus {
 
 .switch {
   text-align: center;
-  background: #101014;
+  background: transparent;
   transition: all 0.2s ease;
   display: inline;
   /* border-radius: 25px; */
@@ -198,13 +202,14 @@ select:focus {
 }
 
 .switch span {
+  margin: 0 15px;
   margin-top: 5px;
   display: inline-block;
   width: 15px;
   height: 15px;
   border-top: 2px solid teal;
   border-right: 2px solid teal;
-  transform: rotate(135deg);
+  transform: rotate(135deg) translateX(-1px) translateY(1px);
   transition: all 0.2s ease;
 }
 
@@ -231,19 +236,16 @@ label[for="asc"] {
 }
 
 #asc:checked ~ .switch {
-  background: #101014;
+  background: transparent;
 }
 #asc:checked ~ .switch span {
-  background: #101014;
-  margin-top: 14px;
-  transform: rotate(-45deg);
+  background: transparent;
+  transform: rotate(45deg) scaleX(-1) translateY(6px) translateX(-6px);
   transition: all 0.2s ease;
 }
 #asc:checked ~ .switch span:after {
   background: #fff;
   height: 20px;
-  margin-top: -8px;
-  margin-left: 8px;
 }
 #desc:checked ~ .switch label[for="yes"] {
   color: #fff;
