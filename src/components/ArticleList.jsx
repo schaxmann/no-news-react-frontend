@@ -130,6 +130,7 @@ function ArticleList() {
         </div>
 
         <button
+          className="sortButton"
           onClick={(event) => {
             sortHandler(event);
           }}

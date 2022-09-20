@@ -254,6 +254,27 @@ label[for="asc"] {
   color: #fff;
 }
 
+@media (max-width: 660px) {
+  .sortTitle {
+    display: none;
+  }
+}
+
+@media (max-width: 532px) {
+  .sort {
+    flex-direction: column;
+  }
+  .sortButton {
+    margin: 0 auto;
+  }
+  .toggle-radio {
+    margin: 0 auto;
+  }
+  select {
+    margin: 0 auto;
+  }
+}
+
 .home {
   all: unset;
   color: teal;
