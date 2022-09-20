@@ -55,7 +55,7 @@ function EasterEgg() {
   return (
     <main>
       <article className="mainArticles">
-        <h2 className="articleTitle">Here, have an Easter Egg</h2>
+        <h2 className="articleTitle">Here, have an Easter Egg!</h2>
         <h3>Unfortunately, grumpy19 isn't real.</h3>
         <p>
           However,{" "}
