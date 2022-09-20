@@ -60,17 +60,6 @@ h4 {
   margin: 0 auto;
   margin-top: 2.5em;
 }
-
-@media (max-width: 800px) {
-  .mainArticles {
-    max-width: 80%;
-    padding: 0;
-  }
-  .commentCard {
-    max-width: 80%;
-  }
-}
-
 .commentBody {
   font-size: 16px;
   margin: 0;
@@ -185,6 +174,7 @@ textarea {
   resize: none;
   word-wrap: break-word;
   word-break: break-all;
+  width: 100%;
 }
 
 textarea:focus {
@@ -207,8 +197,8 @@ textarea:focus {
 }
 
 .postComment {
-  display: flex;
-  /* width: 50%; */
+  /* display: flex; */
+  width: 50%;
   justify-content: center;
   align-items: center;
 }
@@ -224,6 +214,7 @@ textarea:focus {
   padding: 0px;
   padding-bottom: 6px;
   padding-top: 6px;
+  margin-top: 2em;
 }
 
 .post:hover {
@@ -344,4 +335,29 @@ textarea:focus {
   all: unset;
   cursor: pointer;
   color: #dddee5;
+}
+
+@media (max-width: 800px) {
+  .mainArticles {
+    max-width: 80%;
+    padding: 0;
+  }
+  .commentCard {
+    max-width: 80%;
+  }
+  .postComment {
+    width: 80%;
+  }
+  textarea {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1380px) {
+  textarea {
+    width: unset;
+  }
+  .postComment {
+    display: flex;
+  }
 }
