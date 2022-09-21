@@ -98,6 +98,7 @@ nav {
 
 nav a:hover {
   color: #dddee5;
+  cursor: pointer;
 }
 
 li a {
