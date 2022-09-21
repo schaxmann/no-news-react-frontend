@@ -413,7 +413,7 @@ label[for="asc"] {
   font-family: ibm-plex-mono, sans-serif;
 }
 
-@media (max-width: 532px) {
+@media (max-width: 516px) {
   .sort {
     flex-direction: column;
     margin-top: 10px;
